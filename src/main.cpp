@@ -1,7 +1,5 @@
 #include <Arduino.h>
-// Please include ArtnetEther.h to use Artnet on the platform
-// which can use both WiFi and Ethernet
-#include "Artnet.h"
+#include "ArtnetEther.h"
 #include <pt.h>
 #include "protothreads.h"
 #include "./Axis.cpp"
