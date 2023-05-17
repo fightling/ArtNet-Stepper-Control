@@ -6,13 +6,13 @@
 // this is also valid for other platforms which can use only Ethernet
 // #include <Artnet.h>
 
-#define PT_SLEEP_MICROS(pt, delay)                                                                     \
-    {                                                                                                  \
-        do                                                                                             \
-        {                                                                                              \
-            static unsigned long protothreads_sleep = micros();                                        \
-            PT_WAIT_UNTIL(pt, micros() - protothreads_sleep > delay || micros() < protothreads_sleep); \
-        } while (false);                                                                               \
+#define PT_SLEEP_MICROS(pt, delay)                                                                       \
+    {                                                                                                    \
+        do                                                                                               \
+        {                                                                                                \
+            static unsigned long proto_threads_sleep = micros();                                         \
+            PT_WAIT_UNTIL(pt, micros() - proto_threads_sleep > delay || micros() < proto_threads_sleep); \
+        } while (false);                                                                                 \
     }
 
 // Ethernet stuff
